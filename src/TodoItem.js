@@ -1,5 +1,8 @@
-// src/TodoItem.js
+
 import React, { useState } from 'react';
+import Edit from './assets/Edit_N.png';
+import Done from './assets/Done_N.png';
+import Delete from './assets/Delete_N.png';
 
 const TodoItem = ({ todo, index, toggleComplete, deleteTodo, editTodo }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -56,9 +59,9 @@ const TodoItem = ({ todo, index, toggleComplete, deleteTodo, editTodo }) => {
           </>
         ) : (
           <>
-            <button onClick={() => toggleComplete(index)}>Complete</button>
-            <button onClick={() => setIsEditing(true)}>Edit</button>
-            <button onClick={() => deleteTodo(index)}>Delete</button>
+            <button onClick={() => toggleComplete(index)}><img src={Done} alt='Done' className='action' /></button>
+            <button onClick={() => setIsEditing(true)}><img src={Edit} alt='Edit' className='action' /></button>
+            <button onClick={() => deleteTodo(index)}><img src={Delete} alt='Delete' className='action' /></button>
           </>
         )}
       </td>

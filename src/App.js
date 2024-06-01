@@ -1,4 +1,4 @@
-// src/App.js
+
 import React, { useState, useEffect } from 'react';
 import TodoList from './TodoList';
 import TodoForm from './TodoForm';
@@ -7,7 +7,6 @@ import './App.css';
 const App = () => {
   const [todos, setTodos] = useState([]);
 
-  // Load todos from localStorage when the component mounts
   useEffect(() => {
     const storedTodos = JSON.parse(localStorage.getItem('todos'));
     if (storedTodos) {
@@ -15,7 +14,6 @@ const App = () => {
     }
   }, []);
 
-  // Save todos to localStorage whenever the todos state changes
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
@@ -52,6 +50,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="cursive">To-Do List</h1>
+      <h2>Add Task : </h2>
       <TodoForm addTodo={addTodo} />
       <TodoList todos={todos} toggleComplete={toggleComplete} deleteTodo={deleteTodo} editTodo={editTodo} />
     </div>

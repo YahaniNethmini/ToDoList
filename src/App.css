@@ -1,6 +1,8 @@
-/* src/App.css */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+body{
+  background-color: rgb(5, 5, 75);
+}
 
 .App {
   text-align: center;
@@ -13,9 +15,16 @@ table {
   border-collapse: collapse;
 }
 
-th, td {
+th{
   border: 1px solid #ddd;
   padding: 8px;
+
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  color: #fff;
 }
 
 th {
@@ -35,4 +44,19 @@ input[type="text"], input[type="date"] {
 
 .cursive {
   font-family: 'Dancing Script', cursive;
+  font-size: 60px;
+  color: #fff;
+}
+
+h2,p{
+  color: #fff;
+}
+
+.addvalue{
+  border-color: rgb(5, 5, 75);
+}
+
+.action{
+  width: 30px;
+  background-color: none;
 }

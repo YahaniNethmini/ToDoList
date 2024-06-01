@@ -1,4 +1,4 @@
-// src/TodoList.js
+
 import React from 'react';
 import TodoItem from './TodoItem';
 
@@ -10,7 +10,7 @@ const TodoList = ({ todos, toggleComplete, deleteTodo, editTodo }) => {
           <th>Assigned Date</th>
           <th>Task</th>
           <th>Due Date</th>
-          <th>Actions</th>
+          <th>Status</th>
         </tr>
       </thead>
       <tbody>
